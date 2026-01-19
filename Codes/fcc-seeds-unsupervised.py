@@ -10,3 +10,4 @@ cols = ["area", "perimeter", "compactness", "length",
 df = pd.read_csv("seeds_dataset.txt", 
                  names= cols, sep= "\s+")
 
+df.head()

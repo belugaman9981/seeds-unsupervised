@@ -8,5 +8,5 @@ cols = ["area", "perimeter", "compactness", "length",
         "width", "asymmetry", "groove", "class"]
 
 df = pd.read_csv("seeds_dataset.txt", 
-                 names=cols, sep="\s+")
+                 names= cols, sep= "\s+")
 

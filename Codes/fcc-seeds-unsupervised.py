@@ -20,3 +20,15 @@ for i in range(len(cols)-1):
     sns.scatterplot(x= x_label, y= y_label, data= df, hue= 'class')
     plt.show()
     
+
+# CLustering with KMeans
+
+from sklearn.cluster import KMeans
+
+x = "compactness"
+y = "asymmetry"
+X = df[[x, y]].values
+
+kmeans = KMeans(n_clusters = 3).fit(X)
+
+clusters = kmeans.labels_

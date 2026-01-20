@@ -33,7 +33,7 @@ kmeans = KMeans(n_clusters = 3).fit(X)
 
 clusters = kmeans.labels_
 
-cluster_df = pd.DataFrame(np.hstack((X, clusters.reshape(-1, 1))), columns=[x, y, "class"])
+cluster_df = pd.DataFrame(np.hstack((X, clusters.reshape(-1, 1))), columns= [x, y, "class"])
 
 
 # K Means classes
@@ -46,3 +46,11 @@ plt.plot()
 
 sns.scatterplot(x= x, y= y, hue= 'class', data= cluster_df)
 plt.plot()
+
+
+# Higher Demensions
+
+X = df[cols[:-1]].values
+
+kmeans = KMeans(n_clusters = 3).fit(X)
+cluster_df = pd.DataFrame(np.hstack((X, kmeans.labels_.reshape(-1, 1))), columns= df.columns)

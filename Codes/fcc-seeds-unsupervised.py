@@ -66,3 +66,4 @@ plt.plot()
 
 sns.scatterplot(x= x, y= y, hue= 'class', data= cluster_df)
 plt.plot()
+

@@ -32,3 +32,7 @@ X = df[[x, y]].values
 kmeans = KMeans(n_clusters = 3).fit(X)
 
 clusters = kmeans.labels_
+
+clusters
+
+df["class"].values

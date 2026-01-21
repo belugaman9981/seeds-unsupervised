@@ -84,4 +84,9 @@ transformed_x[:5]
 plt.scatter(transformed_x[:, 0], transformed_x[:, 1])
 plt.show()
 
-kmean
+kmeans_pca = pd.DataFrame(np.hstack((transformed_x, df[["class"]].values)), columns= ["pca1", "pca2", "class"])
+
+
+# K Means classes
+sns.scatterplot(x="pca1", y="pca2", hue='class', data=kmeans_pca_df)
+plt.plot()

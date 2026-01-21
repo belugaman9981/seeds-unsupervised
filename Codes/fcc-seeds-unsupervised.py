@@ -79,3 +79,4 @@ X.shape
 
 transformed_x.shape
 
+transformed_x[:5]

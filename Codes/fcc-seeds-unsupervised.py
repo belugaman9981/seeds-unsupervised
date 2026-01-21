@@ -90,3 +90,8 @@ kmeans_pca = pd.DataFrame(np.hstack((transformed_x, df[["class"]].values)), colu
 # K Means classes
 sns.scatterplot(x="pca1", y="pca2", hue='class', data=kmeans_pca_df)
 plt.plot()
+
+
+# Truth classes
+sns.scatterplot(x="pca1", y="pca2", hue='class', data=truth_pca_df)
+plt.plot()

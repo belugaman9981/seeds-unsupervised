@@ -80,3 +80,8 @@ X.shape
 transformed_x.shape
 
 transformed_x[:5]
+
+plt.scatter(transformed_x[:, 0], transformed_x[:, 1])
+plt.show()
+
+kmean

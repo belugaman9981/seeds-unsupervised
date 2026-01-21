@@ -67,3 +67,31 @@ plt.plot()
 sns.scatterplot(x= x, y= y, hue= 'class', data= cluster_df)
 plt.plot()
 
+
+# PCA
+
+from sklearn.decomposition import PCA
+
+pca = PCA(n_components= 2)
+transformed_x = pca.fit_transform(X)
+
+X.shape
+
+transformed_x.shape
+
+transformed_x[:5]
+
+plt.scatter(transformed_x[:, 0], transformed_x[:, 1])
+plt.show()
+
+kmeans_pca = pd.DataFrame(np.hstack((transformed_x, df[["class"]].values)), columns= ["pca1", "pca2", "class"])
+
+
+# K Means classes
+sns.scatterplot(x="pca1", y="pca2", hue='class', data=kmeans_pca_df)
+plt.plot()
+
+
+# Truth classes
+sns.scatterplot(x="pca1", y="pca2", hue='class', data=truth_pca_df)
+plt.plot()

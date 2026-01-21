@@ -67,3 +67,9 @@ plt.plot()
 sns.scatterplot(x= x, y= y, hue= 'class', data= cluster_df)
 plt.plot()
 
+
+# PCA
+
+from sklearn.decomposition import PCA
+
+pca = PCA(n_components= 2)
